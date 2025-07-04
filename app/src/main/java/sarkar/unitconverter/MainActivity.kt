@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -14,6 +15,8 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material3.Button
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
@@ -60,20 +63,96 @@ fun UnitConverter() {
         Spacer(modifier = Modifier.height(25.dp))
 
         Row {
-            Button(onClick = {}) {
-                Text("Select")
-                Icon(Icons.Default.ArrowDropDown,
-                    contentDescription = "drop down arrow")
+            Box {
+                Button(onClick = {}) {
+                    Text("Select")
+                    Icon(
+                        Icons.Default.ArrowDropDown,
+                        contentDescription = "drop down arrow"
+                    )
+                }
+
+                DropdownMenu(
+                    expanded = false,
+                    onDismissRequest = {}) {
+
+                    DropdownMenuItem(
+                        text = { Text("Meter") },
+                        onClick = {})
+                }
+
+                DropdownMenu(
+                    expanded = false,
+                    onDismissRequest = {}
+                ) {
+
+                    DropdownMenuItem(
+                        text = { Text("Meter")},
+                        onClick = {}
+                    )
+
+                    DropdownMenuItem(
+                        text = { Text("Centimeter")},
+                        onClick = {}
+                    )
+
+                    DropdownMenuItem(
+                        text = { Text("Feet")},
+                        onClick = {}
+                    )
+
+                    DropdownMenuItem(
+                        text = { Text("Millimeter")},
+                        onClick = {}
+                    )
+                }
             }
 
             Spacer(modifier = Modifier.width(25.dp))
 
-            Button(onClick = {}) {
-                Text("Select")
-                Icon(
-                    Icons.Default.ArrowDropDown,
-                    contentDescription = "drop down arrow"
-                )
+            Box {
+                Button(onClick = {}) {
+                    Text("Select")
+                    Icon(
+                        Icons.Default.ArrowDropDown,
+                        contentDescription = "drop down arrow"
+                    )
+                }
+
+                DropdownMenu(
+                    expanded = false,
+                    onDismissRequest = {}) {
+
+                    DropdownMenuItem(
+                        text = { Text("Meter") },
+                        onClick = {})
+                }
+
+                DropdownMenu(
+                    expanded = false,
+                    onDismissRequest = {}
+                ) {
+
+                    DropdownMenuItem(
+                        text = { Text("Meter")},
+                        onClick = {}
+                    )
+
+                    DropdownMenuItem(
+                        text = { Text("Centimeter")},
+                        onClick = {}
+                    )
+
+                    DropdownMenuItem(
+                        text = { Text("Feet")},
+                        onClick = {}
+                    )
+
+                    DropdownMenuItem(
+                        text = { Text("Millimeter")},
+                        onClick = {}
+                    )
+                }
             }
         }
 
